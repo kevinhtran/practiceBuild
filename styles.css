@@ -1,0 +1,18 @@
+.headers {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gold;
+}
+
+.ripkobe {
+    font-weight: bolder;
+    color: purple;
+    box-shadow: goldenrod;
+}
+
+.lakers {
+    width: 500px;
+    height: auto;
+    background-color: goldenrod;
+    border: 5px solid purple;
+    text-align: center;
+}
