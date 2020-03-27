@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSS Grids</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar With Icons</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: -200px;
+            width: 200px;
+            height: 100%;
+            background: #009879;
+            border-right: 2px solid #008c71;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        }
+
+        .navbar--open {
+            left: 0;
+            opacity: 1;
+        }
+
+        .navbar__link {
+            display: flex;
+            align-items: center;
+            background: #008C71;
+            color: #ffffff;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #009879;
+        }
+
+        .navbar__link .material-icons {
+            margin-right: 12px;
+        }
+
+        .navbar__link:active {
+           background: #007d65; 
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor est soluta dicta rerum accusantium atque iste natus, aperiam ipsa! Eum, natus alias. Sit blanditiis modi quisquam a autem quo obcaecati nisi, quam incidunt dignissimos sequi quas cum quos, rerum sunt error animi labore ex temporibus nobis consequatur? Repellat saepe fugit inventore dignissimos magnam nesciunt perspiciatis a consequatur consequuntur eius velit officia sint explicabo quas ad enim placeat, cupiditate unde repellendus voluptas! Voluptate, in accusamus? Placeat perferendis rem totam velit aliquid?
-        </div>
-        <div class="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia blanditiis sed ut fuga illum consequatur exercitationem enim nulla dicta tenetur dolorum adipisci voluptatibus laboriosam molestiae, veritatis cupiditate at eum. Quisquam.
-        </div>
-        <div class="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor est soluta dicta rerum accusantium atque iste natus, aperiam ipsa! Eum, natus alias. Sit blanditiis modi quisquam a autem quo obcaecati nisi, quam incidunt dignissimos sequi quas cum quos, rerum sunt error animi labore ex temporibus nobis consequatur? Repellat saepe fugit inventore dignissimos magnam nesciunt perspiciatis a consequatur consequuntur eius velit officia sint explicabo quas ad enim placeat, cupiditate unde repellendus voluptas! Voluptate, in accusamus? Placeat perferendis rem totam velit aliquid?
-        </div>
-        <div class="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia blanditiis sed ut fuga illum consequatur exercitationem enim nulla dicta tenetur dolorum adipisci voluptatibus laboriosam molestiae, veritatis cupiditate at eum. Quisquam.
-        </div>
+    <h1>Navigation Bar With Icons</h1>
+    <button onclick="toggleNav()" style="float: right;">Open/Close Nav</button>
+    <div class="navbar">
+        <a href="#" class="navbar__link">
+            <span class="material-icons">home</span>Home
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">photo_library</span>Photos
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">question_answer</span>Forum
+        </a>
+        <a href="#" class="navbar__link">
+            <span class="material-icons">exit_to_app</span>Logout
+        </a>
     </div>
+
+    <script>
+        function toggleNav() {
+            document.querySelector(".navbar").classList.toggle("navbar--open");
+        }
+    </script>
+
+    
 </body>
 </html>
